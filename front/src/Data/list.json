@@ -1,0 +1,98 @@
+[
+    {
+        "id":1,
+        "name":"HarryPotter",
+        "Title":"The Philosopher's Stone",
+        "price":0,
+        "category":"free",
+        "image":"https://www.wizardingworld.com/_next/image?url=%2Fimages%2Fproducts%2Fbooks%2FUK%2Frectangle-1.jpg&w=1042&q=75"
+    },
+    {
+        "id":2,
+        "name":"HarryPotter",
+        "Title":"The Chamber's of Secret",
+        "price":0,
+        "category":"free",
+        "image":"https://www.wizardingworld.com/_next/image?url=%2Fimages%2Fproducts%2Fbooks%2FUK%2Frectangle-2.jpg&w=1042&q=75"
+    },
+    {
+        "id":3,
+        "name":"HarryPotter",
+        "Title":"The Goblet of Fire",
+        "price":0,
+        "category":"free",
+        "image":"https://www.wizardingworld.com/_next/image?url=%2Fimages%2Fproducts%2Fbooks%2FUK%2Frectangle-3.jpg&w=1042&q=75"
+    },
+    {
+        "id":4,
+        "name":"HarryPotter",
+        "Title":"The Philosopher's Stone",
+        "price":0,
+        "category":"free",
+        "image":"https://www.wizardingworld.com/_next/image?url=%2Fimages%2Fproducts%2Fbooks%2FUK%2Frectangle-4.jpg&w=1042&q=75"
+    },
+    {
+        "id":5,
+        "name":"HarryPotter",
+        "Title":"The Chamber's of Secret",
+        "price":0,
+        "category":"free",
+        "image":"https://www.wizardingworld.com/_next/image?url=%2Fimages%2Fproducts%2Fbooks%2FUK%2Frectangle-5.jpg&w=1042&q=75"
+    },
+    {
+        "id":6,
+        "name":"HarryPotter",
+        "Title":"The Goblet of Fire",
+        "price":0,
+        "category":"free",
+        "image":"https://www.wizardingworld.com/_next/image?url=%2Fimages%2Fproducts%2Fbooks%2FUK%2Frectangle-6.jpg&w=1042&q=75"
+    },
+    {
+        "id":7,
+        "name":"HarryPotter",
+        "Title":"The Philosopher's Stone",
+        "price":120,
+        "category":"not",
+        "image":"https://www.wizardingworld.com/_next/image?url=%2Fimages%2Fproducts%2Fbooks%2FUK%2Frectangle-7.jpg&w=1042&q=75"
+    },
+    {
+        "id":8,
+        "name":"HarryPotter",
+        "Title":"The Chamber's of Secret",
+        "price":0,
+        "category":"free",
+        "image":"https://www.wizardingworld.com/_next/image?url=%2Fimages%2Fproducts%2Fbooks%2FUK%2Frectangle-8.jpg&w=1042&q=75"
+    },
+    {
+        "id":9,
+        "name":"HarryPotter",
+        "Title":"The Goblet of Fire",
+        "price":0,
+        "category":"free",
+        "image":"https://www.wizardingworld.com/_next/image?url=%2Fimages%2Fproducts%2Fbooks%2FUK%2Frectangle-9.jpg&w=1042&q=75"
+    },
+    {
+        "id":10,
+        "name":"HarryPotter",
+        "Title":"The Philosopher's Stone",
+        "price":0,
+        "category":"free",
+        "image":"https://www.wizardingworld.com/_next/image?url=%2Fimages%2Fproducts%2Fbooks%2FUK%2Frectangle-10.jpg&w=1042&q=75"
+    },
+    {
+        "id":12,
+        "name":"HarryPotter",
+        "Title":"The Chamber's of Secret",
+        "price":0,
+        "category":"free",
+        "image":"https://www.wizardingworld.com/_next/image?url=%2Fimages%2Fproducts%2Fbooks%2FUK%2Frectangle-11.jpg&w=1042&q=75"
+    },
+    {
+        "id":13,
+        "name":"HarryPotter",
+        "Title":"The Goblet of Fire",
+        "price":110,
+        "category":"cost",
+        "image":"https://www.wizardingworld.com/_next/image?url=%2Fimages%2Fproducts%2Fbooks%2FUK%2Frectangle-12.jpg&w=1042&q=75"
+    }
+]
