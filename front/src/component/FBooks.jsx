@@ -1,11 +1,27 @@
 import React from "react";
-import list from "../Data/list.json";
+// import list from "../Data/list.json";
+import axios from "axios";
+import { useEffect, useState } from "react";
+
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import Card from "./Card";
 
 function FBooks() {
+  const [books, setBooks] = useState([]);
+  useEffect(() => {
+    const getBooks = async () => {
+      try {
+        const res=await axios.get("http://localhost:4001/book/");
+        // console.log(res.data);
+        setBooks(res.data);
+      } catch(error) {
+        console.log("Error",error);
+      }
+    };
+    getBooks();
+  }, []);
   const settings = {
     dots: true,
     infinite: false,
@@ -34,7 +50,7 @@ function FBooks() {
     ],
   };
 
-  const filterData = list.filter((itm) => itm.category === "free");
+  const filterData = books.filter((itm) => itm.category === "free");
 
   return (
     <div className="max-w-screen-2xl  container mx-auto md:px-20 px-4  dark:bg-slate-900 dark:text-white ">

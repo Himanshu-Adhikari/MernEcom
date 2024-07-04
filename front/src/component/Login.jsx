@@ -1,13 +1,41 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
+import axios from "axios";
+import toast from "react-hot-toast";
 function Login() {
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
-  const onSubmit = (data) => console.log(data);
+  const onSubmit = async (data) => {
+    const userInfo = {
+      email: data.email,
+      password: data.password,
+    };
+    await axios
+      .post("http://localhost:4001/user/login", userInfo)
+      .then((res) => {
+        console.log(res.data);
+        if (res.data) {
+          toast.success("Login Successful");
+          document.getElementById("my_modal_3").close();
+          setTimeout(() => {
+            localStorage.setItem("Users", JSON.stringify(res.data.user));
+            window.location.reload();
+          }, 1500);
+        }
+      })
+      .catch((err) => {
+        document.getElementById("my_modal_3").close();
+        toast.error("Login Failed");
+        if (err.response) {
+          console.log(err);
+        }
+        setTimeout(() => {}, 1000);
+      });
+  };
   return (
     <div>
       <dialog id="my_modal_3" className="modal">
@@ -34,7 +62,11 @@ function Login() {
                 {...register("email", { required: true })}
               />
               <br />
-              {errors.email && <span className="text-red-500 text-sm">This field is required</span>}
+              {errors.email && (
+                <span className="text-red-500 text-sm">
+                  This field is required
+                </span>
+              )}
             </div>
             <div className="mt-4 space-y-2 ">
               <span>Password</span>
@@ -46,7 +78,11 @@ function Login() {
                 {...register("password", { required: true })}
               />
               <br />
-              {errors.password && <span className="text-red-500 text-sm">This field is required</span>}
+              {errors.password && (
+                <span className="text-red-500 text-sm">
+                  This field is required
+                </span>
+              )}
             </div>
             <div className="flex justify-between mt-4">
               <button className="bg-pink-500 text-white rounded-md px-3 py-1 hover:bg-pink-700 duration-200">
