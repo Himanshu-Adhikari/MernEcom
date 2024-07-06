@@ -34,13 +34,22 @@ function Navbar() {
       removeEventListener("scroll", handleScroll);
     };
   }, []);
+  const handleContackClick=(e)=>{
+    if(authUser){
+      Navigate("/contact");
+    }
+    else{
+      e.preventDefault();
+      document.getElementById("my_modal_3").showModal();
+    }
+  }
   const navList = (
     <>
       <li>
         <a href="/">Home</a>
       </li>
       <li>
-        <a href="/contact">Contact</a>
+        <a href="/contact" onClick={handleContackClick}>Contact</a>
       </li>
       <li>
         <a>Blog</a>
@@ -54,7 +63,7 @@ function Navbar() {
     <div
       className={`max-w-screen-2xl container dark:bg-slate-900 dark:text-white mx-auto md:px-20 px-4 fixed top-0 left-0 right-0 z-50 ${
         scrl
-          ? "sticky-navbar shadow-md  duration-300  bg-slate-600 transition-all  ease-in-out  dark:bg-slate-600 dark:text-white"
+          ? "sticky-navbar shadow-md  duration-300  bg-200 transition-all  ease-in-out  dark:bg-black-400 dark:text-white"
           : ""
       }`}
     >
@@ -85,7 +94,7 @@ function Navbar() {
             </ul>
           </div>
           <a className="btn btn-ghost text-2xl cursor-pointer font-bold">
-            CubeCom
+          {authUser?authUser.name:"CubeCom"}
           </a>
         </div>
         <div className="navbar-end space-x-3 ">
@@ -145,7 +154,7 @@ function Navbar() {
           </div>
           {authUser?<Logout/>: (<div className="">
             <a
-              className="btn bg-white  px-3 py-2 rounded-md hover:bg-slate-800 
+              className="btn  px-3 py-2 bg-slate-1000 rounded-md hover:bg-slate-800 
             hover:text-white duration-300 cursor-pointer" onClick={()=>{document.getElementById("my_modal_3").showModal()}}
             >
               Login
